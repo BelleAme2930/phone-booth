@@ -1,14 +1,8 @@
 import jLogo from '@assets/jameson-logo.png';
-import phoneIcon from '@assets/phone-icon.svg';
-import phoneGreen from '@assets/phone-vector.svg';
 import loading from '@assets/loading.gif';
 import client from '@assets/client.png';
 import sup3rnovaLogo from '@assets/logo.png';
 import hangup from '@assets/hangup.svg';
-import celebration from '@assets/celebration.gif';
-import wave from '@assets/wave.gif';
-import rotateLogo from '@assets/rotate-logo.gif';
-import bgPhone from '@assets/initiator-phone.png';
 import bgCanvas from "@assets/curved-bg.png";
 
 function Connecting() {
