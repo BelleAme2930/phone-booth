@@ -39,6 +39,11 @@ function Home() {
     setIsCallDisabled(false);
   };
 
+  const handleCheckboxItselfClick = () => { 
+    setIsTermsChecked(!isTermsChecked)
+    setIsCallDisabled(!isCallDisabled);
+  }
+
   const handleCheckboxChange = (e: any) => {
     setIsChecked(e.target.checked);
     if (e.target.checked) {
@@ -166,30 +171,26 @@ function Home() {
           </div>
         </div>
         <div className="rounded-full flex items-center justify-center mx-auto md:mt-[40px] 2xl:mt-[90px] md:mb-5 2xl:mb-8">
-          <img src={sup3rnovaLogo} className="logo-v2 md:h-40 md:w-40 2xl:h-[220px] 2xl:w-[220px] react" alt="logo" />
+          <img src={sup3rnovaLogo} className="logo-v2 md:h-40 md:w-40 2xl:h-[220px] 2xl:w-[220px] react magnific-popup" alt="logo" />
         </div>
         <div className="text-center w-2/3 mx-auto mb-5"><p className="font-light text-[#F1E4B2] open-sans md:text-[14px] 2xl:text-[17px]">OPRIME EL BOTÓN PARA INICIAR LLAMADA A OTRO TELÉFONO DE JAMESON.</p></div>
 
-        <button onClick={IntializeCall} className="dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] md:w-[350px] 2xl:w-[420px] mx-auto md:mb-4 2xl:mb-8 border-none hover:border-none" disabled={isCallDisabled}><span>¡LLAMAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
+        <button onClick={IntializeCall} className="magnific-popup-bit-delay dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] md:w-[350px] 2xl:w-[420px] mx-auto md:mb-4 2xl:mb-8 border-none hover:border-none" disabled={isCallDisabled}><span>¡LLAMAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
 
 
         <h2 className="mt-5 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px]">
-          <input type="checkbox" id="termsCheckbox" checked={isTermsChecked} className="h-12 w-12 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
+          <input type="checkbox" id="termsCheckbox" onChange={handleCheckboxItselfClick} checked={isTermsChecked} className="h-9 w-9 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
           <label htmlFor="termsCheckbox" className="ml-2">
             Confirmo que soy mayor de 18 años de edad, y acepto los términos y condiciones.
           </label>
         </h2>
 
-
-        {/* <Link to="/start/terms" className="m-5 md:mb-15 mb-15 px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
-          LEER TÉRMINOS Y CONDICIONES*
-        </Link> */}
-        <button onClick={handleTermsClick} className="m-5 md:mb-15 mb-15 px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
+        <button onClick={handleTermsClick} className="relative z-40 m-5 md:mb-15 mb-15 px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
           LEER TÉRMINOS Y CONDICIONES*
         </button>
 
 
-        <div className="z-10 bg-[#133923] py-2 px-3 w-full absolute bottom-0 left-0 "><p className="text-[#F1E4B2] open-sans text-center mx-auto md:text-[13px] 2xl:text-[16px] 2xl:pl-[20px]">Consuma Responsablemente. Jameson Irish Whiskey 40% Alc. Vol. Distribuye B. Fernánadez & Hnos.</p></div>
+        <div className="z-10 bg-[#133923] py-2 px-3 w-full absolute bottom-0 left-0"><p className="f-sticky-para text-[#F1E4B2] open-sans text-center mx-auto md:text-[13px] 2xl:text-[16px] 2xl:pl-[20px]">Consuma Responsablemente. Jameson Irish Whiskey 40% Alc. Vol. Distribuye B. Fernánadez & Hnos.</p></div>
         <div className="bottle absolute left-0 bottom-0 max-w-full z-10 flex justify-start">
           <img src={jGinger} alt="Canvas" className="" />
         </div>
@@ -222,7 +223,7 @@ function Home() {
         <div className="terms text-left md:py-10 2xl:py-20 text-[#6B6B6B] max-w-[95%] mx-auto">
           <h1 className="text-[30px] text-[#007749] mb-7">Términos y Condiciones</h1>
           <h2 className="text-[24px] text-[#132F41] mb-7">Términos</h2>
-          <div className="h-[600px] overflow-y-auto open-sans">
+          <div className="open-sans">
             <p className="mb-6">1. Aceptación de los Términos Al descargar y utilizar esta aplicación, usted acepta estar sujeto a estos términos y condiciones. Si no está de acuerdo con ellos, por favor no use la aplicación.</p>
 
             <p className="mb-6">2. Uso Apropiado Esta aplicación está destinada exclusivamente para usuarios mayores de edad legal para consumir bebidas alcohólicas en su país de residencia. Usted acepta usar la aplicación solo para fines legales y de manera que no infrinja los derechos de, restrinja o inhiba el uso y disfrute de la aplicación por parte de terceros.</p>
