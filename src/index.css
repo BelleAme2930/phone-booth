@@ -396,3 +396,69 @@ body:has(.conversation-call) {
     margin: 0 auto;
   }
 }
+.receiver-head{
+    margin-bottom: 200px;
+}
+.receiver-mid{
+    margin-top: 50px;
+}
+.receiver-bott{
+    margin-top: 50px;
+}
+@media(min-width: 1200px){
+    .receiver-head{
+    margin-bottom: 220px;
+}
+    .receiver-bott{
+    margin-top: 30px;
+}
+
+}
+@media(min-width: 1440px){
+    .receiver-head{
+    margin-bottom: 250px;
+}
+}
+@media(min-width: 1536px){
+.receiver-head{
+    margin-bottom: 260px;
+}
+.receiver-bott{
+    margin-top: 20px;
+}
+}
+@media(min-width: 1600px){
+.receiver-head{
+    margin-bottom: 270px;
+}
+}
+@media(min-width: 1750px){
+  .receiver-head{
+      margin-bottom: 280px;
+  }
+  }
+@media(min-width: 1920px){
+.receiver-head{
+    margin-bottom: 310px;
+}
+}
+@media(min-width: 2000px){
+.receiver-head{
+    margin-bottom: 350px;
+}
+}
+@media(min-width: 2200px){
+.receiver-head{
+    margin-bottom: 400px;
+}
+}
+@media(min-width: 2350px){
+  .receiver-head{
+      margin-bottom: 430px;
+  }
+  }
+  @media(min-width: 2500px){
+    .receiver-head{
+        margin-bottom: 480px;
+    }
+    }

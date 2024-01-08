@@ -105,7 +105,7 @@ const ReceiverAcknowledge = () => {
   return (
     <div className="receiver-call h-full lg:pt-[90px] xl:pt-[100px] 2xl:pt-[100px]">
 
-      <div className="relative z-30 flex flex-col justify-between mx-auto lg:mb-[180px] xl:mb-[220px] 2xl:mb-[240px]">
+      <div className="receiver-head relative z-30 flex flex-col justify-between mx-auto">
         <div className="text-center"><img src={jLogo} alt="Jameson Logo" className="h-auto md:w-[220px] lg:w-[280px] 2xl:w-[360px] mx-auto lg:mb-[60px] xl:mb-[20px] 2xl:mb-[60px]"></img></div>
         <h2 className="text-2xl mx-auto leading-10 text-[#F1E4B2] text-[22px] lg:text-[24px] xl:text-[30px] 2xl:text-[38px] open-sans tracking-widest">LLAMADA ENTRANDO</h2>
       </div>
@@ -115,13 +115,13 @@ const ReceiverAcknowledge = () => {
         <button className="dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] border-none hover:border-none lg:w-[320px] 2xl:w-[430px]"><span>¡ACEPTAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
       </div>
 
-      <div className="lg:mt-[160px] xl:mt-[210px] 2xl:mt-[180px]">
+      <div className="receiver-mid">
       <Link to="/start/terms" className="px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
           LEER TÉRMINOS Y CONDICIONES*
         </Link>
         </div>
 
-      <div className="absolute w-[60%] lg:bottom-[250px] xl:bottom-[220px] 2xl:bottom-[220px]">
+      <div className="receiver-bott ">
         <div className="flex">
           <div className="flex items-center gap-10 absolute z-50">
             <div className="relative z-40 relative lg:w-[420px] flex items-center mx-auto">
