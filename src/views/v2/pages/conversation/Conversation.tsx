@@ -2,6 +2,7 @@ import jLogo from '@assets/jameson-logo.png';
 import loading from '@assets/loading.gif';
 import client from '@assets/client.png';
 import sup3rnovaLogo from '@assets/logo.png';
+import signifier from '@assets/signifier.svg';
 import hangup from '@assets/hangup.svg';
 import bgCanvas from "@assets/curved-bg.png";
 import { useEffect, useState } from 'react';
@@ -11,7 +12,7 @@ function Conversation() {
 
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-    const [showCongrats, setShowCongrats] = useState(false);
+    const [message, setMessage] = useState("En pocos segundos ampliarás tu círculo de amistades. Aprovecha este tiempo al máximo y recibirás una recompensa.");
 
     const navigate = useNavigate();
 
@@ -33,9 +34,30 @@ function Conversation() {
     }, [seconds]);
 
     useEffect(() => {
-        if (minutes === 1 && seconds === 0) {
-            setShowCongrats(true);
+        if (seconds === 5) {
+            setMessage("¿Cómo te llamas?");
+        } else if (seconds === 10) {
+            setMessage("¿En qué barra estás?");
+        } else if (seconds === 15) {
+            setMessage("¿Cuál es tu spot favorito en P.R.?");
+        } else if (seconds === 20) {
+            setMessage("¿Jangueas en corillx o en la tuya?");
+        } else if (seconds === 25) {
+            setMessage("¿Cuál sería tu super poder?");
+        } else if (seconds === 30) {
+            setMessage("¿Cuál es tu comida favorita?");
+        } else if (seconds === 35) {
+            setMessage("¿Qué te apasiona?");
+        } else if (seconds === 40) {
+            setMessage("¿Empanadilla o Pastelillo?");
+        } else if (seconds === 45) {
+            setMessage("¿Amarillitos o tostones?");
+        } else if (seconds === 50) {
+            setMessage("¡Cuéntame algo que no sepan tus papás!");
+        } else if (minutes > 0 && seconds === 0) {
+            setMessage(`¡FELICIDADES! Llegaron a ${minutes}:00`);
         }
+
     }, [minutes, seconds]);
 
     return (
@@ -46,18 +68,17 @@ function Conversation() {
                     <div className='timer border border-[10px] border-[#007749] text-[48px] text-[#F1E4B2] rounded-[27px] md:mb-8 2xl:mb-20'>
                         {`${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`}
                     </div>
-                    {showCongrats ? (
-                        <p className='text-[#F1E4B2] text-left open-sans lg:text-[16px] 2xl:text-[18px]'>
-                            <span className='font-extrabold mb-[10px] block'>¡FELICIDADES!</span>
-                            Llegaron a 01:00 pero puedes continuar conversando.<br />
-                            En la próxima pantalla podrás colocar tu información.
+
+                        <p className='bg-[#154734] py-[30px] px-[20px] rounded-[18px] text-[#F1E4B2] text-left open-sans lg:text-[16px] 2xl:text-[18px] relative'>
+                            {seconds < 5 ? (
+                                <div className='message'>{message}</div>
+                            ) : (
+                                <h2 className='message'>{message}</h2>
+                            )
+                            }
+
                         </p>
-                    ) : (
-                        <p className='text-[#F1E4B2] text-left open-sans text-[18px]'>
-                            <span className='font-extrabold mb-[10px] block'>¡Buen trabajo!</span>
-                            Cuando lleguen a 01:00 conversando, ambos ganarán un premio sorpresa.
-                        </p>
-                    )}
+
                 </div>
             </div>
             <div className="absolute z-40 right-7 bottom-7 h-10 w-10">
