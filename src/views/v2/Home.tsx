@@ -150,7 +150,23 @@ function Home() {
 
     }
 
-    navigate("/start/new-call");
+
+    updateBoothInfo({ ...boothInfo, role: "subscriber" });
+
+    const _videoInfoData: IVideoInfo = {
+      ...videoInfo,
+      status: "waiting",
+      receiver: boothInfo?.mac,
+    };
+
+    updateVideoInfo(_videoInfoData);
+
+    const payloadData = { ..._videoInfoData };
+
+    client?.publish(MQTT_TOPICS.CALL_ACCEPT, JSON.stringify(payloadData));
+
+
+    navigate("/start/receiver-ack");
   };
 
   const IntializeCall = () => {
