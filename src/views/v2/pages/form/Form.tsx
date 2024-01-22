@@ -63,8 +63,8 @@ function Form() {
 
         <div className="form">
 
-            <div className="flex 2xl:pt-20">
-                <div className="w-[40%]">
+            <div className="flex 2xl:pt-20 px-[20px]">
+                <div className="w-[50%]">
                     <div className="mx-10 relative z-30 flex flex-col justify-between md:pt-10 2xl:pt-14 mb-10 2xl:mb-10">
                         <div className="text-center md:mb-6 2xl:mb-5"><img src={jLogo} alt="Jameson Logo" className="h-auto mx-auto md:w-[180px] lg:w-[220px] 2xl:w-[300px]"></img></div>
                     </div>
@@ -118,7 +118,7 @@ function Form() {
                         </div>
                     </div>
                 </div>
-                <div className="w-[35%]">
+                <div className="w-[50%]">
                     <div className='form-holder pt-[120px] px-5'>
                         <p className='text-[18px] text-[#F1E4B2] open-sans text-left mb-4'>¡Ya ves lo divertido que es ampliar tu círculo! Queremos premiarte por haber aceptado el reto, coloca tu información para recibir una sorpresa.</p>
                         <form action="/">
@@ -150,7 +150,7 @@ function Form() {
                         </form>
                     </div>
                 </div>
-                <div className="w-[25%] text-center flex justify-center">
+                <div className="w-[200px] text-center flex justify-center">
                     <img src={sup3rnovaLogo} alt="Jameson" className='mt-[40px] 2xl:-mt-[30px] lg:h-[100px] xl:h-[120px] 2xl-[160px]'></img>
                     <img src={bottle} alt="Jameson" className='h-[70%] 2xl:h-[80%] xl:ml-[10px] 2xl:ml-[30px] absolute bottom-0 w-auto' />
                 </div>

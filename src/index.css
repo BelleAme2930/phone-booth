@@ -68,9 +68,6 @@ body:has(.receiver-call){
 #root:has(.receiver-call) .container{
   margin: 0 auto;
 }
-#root:has(.form){
-  width: 85%;
-}
 @media(min-width: 1536px) {
   #root:has(.connecting-call),
   #root:has(.conversation-call){
@@ -462,3 +459,9 @@ body:has(.conversation-call) {
         margin-bottom: 480px;
     }
     }
+    h2.message{
+      font-size: 30px;
+  }
+.no-answer-button{
+  box-shadow: 0px 4px 4px 0px #00000040;
+}

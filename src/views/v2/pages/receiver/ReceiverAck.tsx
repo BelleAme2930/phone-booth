@@ -24,7 +24,7 @@ import Select from "~/lib/Select";
 const ReceiverAcknowledge = () => {
   const navigate = useNavigate();
   const { client } = useMqttState();
-  const [isTermsChecked, setIsTermsChecked] = useState(false);
+  const [isTermsChecked, setIsTermsChecked] = useState(true);
   const [isCallDisabled, setIsCallDisabled] = useState(true);
   const [showTerms, setShowTerms] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
@@ -158,7 +158,6 @@ const ReceiverAcknowledge = () => {
               <img src={phoneGreen} alt="Phone" className="-mr-[30px]" />
               <p className="text-[#F1E4B2] border-[1px] py-2 px-4 rounded-full border-dashed border-green-700">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
             </div>
-            {/* <h2 className="mt-5 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px] w-[420px]"><img src={markBox} className="w-10 h-10"></img>Confirmo que soy mayor de 18 años de edad, y acepto los términos y condiciones.</h2> */}
             <h2 className="mt-5 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px] w-[420px]">
           <input type="checkbox" id="termsCheckbox" onChange={handleCheckboxItselfClick} checked={isTermsChecked} className="h-9 w-9 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
           <label htmlFor="termsCheckbox" className="ml-2">

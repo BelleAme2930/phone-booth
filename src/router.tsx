@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./views/v2/Home";
 import InitiatorAcknowledge from "./views/v2/pages/initiator/InitiatorAck";
+import NoAnswer from "./views/v2/pages/noanswer/NoAnswer";
 import ReceiverAcknowledge from "./views/v2/pages/receiver/ReceiverAck";
 import InitiatorConnecting from "./views/v2/pages/connector/Connecting";
 import Form from "./views/v2/pages/form/Form";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "initiator-ack",
         element: <InitiatorAcknowledge />,
+      },
+      {
+        path: "no-answer",
+        element: <NoAnswer />,
       },
       {
         path: "initiator-conn",
