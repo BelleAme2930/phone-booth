@@ -1,6 +1,5 @@
 import jLogo from '@assets/jameson-logo.png';
 import loading from '@assets/loading.gif';
-import congOne from '@assets/cong-one.gif';
 import congTwo from '@assets/cong-two.gif';
 import congThree from '@assets/cong-three.gif';
 import client from '@assets/client.png';
