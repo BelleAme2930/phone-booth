@@ -82,6 +82,7 @@ const InitiatorAcknowledge = () => {
   };
 
   const prepareForCall = () => {
+    console.log("here")
     if (!videoInfo.sessionId) return;
 
     const payload = {
@@ -89,6 +90,9 @@ const InitiatorAcknowledge = () => {
     };
 
     client?.publish(MQTT_TOPICS.CALL_RING, JSON.stringify(payload));
+    setTimeout(() => {
+      onNext()
+    }, 5000)
   };
 
   const onNext = () => {
@@ -96,7 +100,7 @@ const InitiatorAcknowledge = () => {
       MQTT_TOPICS.CALL_CONNECTING,
       JSON.stringify({ ...videoInfo, status: videoInfo.status === "connecting" ? "connected" : "connecting" })
     );
-
+console.log("navigate....")
     navigate(`/start/call`);
   };
 

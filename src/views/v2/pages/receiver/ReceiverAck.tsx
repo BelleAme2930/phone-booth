@@ -58,7 +58,7 @@ const ReceiverAcknowledge = () => {
     }
   }, [socket, addListener]);
 
-  const handleCheckboxItselfClick = () => { 
+  const handleCheckboxItselfClick = () => {
     setIsTermsChecked(!isTermsChecked)
     setIsCallDisabled(!isCallDisabled);
   }
@@ -128,7 +128,6 @@ const ReceiverAcknowledge = () => {
       MQTT_TOPICS.CALL_CONNECTING,
       JSON.stringify({ ...videoInfo, status: videoInfo.status === "connecting" ? "connected" : "connecting" })
     );
-
     navigate(`/start/call`);
   };
 
@@ -142,14 +141,14 @@ const ReceiverAcknowledge = () => {
 
       <div className="flex mx-auto items-center justify-center relative z-40 lg:w-[780px] 2xl:w-[880px] mb-[20px]">
         <span className="absolute open-sans left-0 lg:w-[200px] text-[#F1E4B2] text-right">OPRIME EL BOTÓN PARA INICIAR LLAMADA A OTRO TELÉFONO DE JAMESON.</span>
-        <button className="dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] border-none hover:border-none lg:w-[320px] 2xl:w-[430px]"><span>¡ACEPTAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
+        <button onClick={onNext} className="dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] border-none hover:border-none lg:w-[320px] 2xl:w-[430px]"><span>¡ACEPTAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
       </div>
 
       <div className="receiver-mid">
-      <button onClick={handleTermsClick} className="relative z-40 m-5 md:mb-15 mb-15 px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
+        <button onClick={handleTermsClick} className="relative z-40 m-5 md:mb-15 mb-15 px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
           LEER TÉRMINOS Y CONDICIONES*
         </button>
-        </div>
+      </div>
 
       <div className="receiver-bott ">
         <div className="flex">
@@ -159,14 +158,14 @@ const ReceiverAcknowledge = () => {
               <p className="text-[#F1E4B2] border-[1px] py-2 px-4 rounded-full border-dashed border-green-700">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
             </div>
             <h2 className="mt-5 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px] w-[420px]">
-          <input type="checkbox" id="termsCheckbox" onChange={handleCheckboxItselfClick} checked={isTermsChecked} className="h-9 w-9 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
-          <label htmlFor="termsCheckbox" className="ml-2">
-            Confirmo que soy mayor de 18 años de edad, y acepto los términos y condiciones.
-          </label>
-        </h2>
+              <input type="checkbox" id="termsCheckbox" onChange={handleCheckboxItselfClick} checked={isTermsChecked} className="h-9 w-9 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
+              <label htmlFor="termsCheckbox" className="ml-2">
+                Confirmo que soy mayor de 18 años de edad, y acepto los términos y condiciones.
+              </label>
+            </h2>
           </div>
         </div>
-        
+
       </div>
       <div className="absolute w-[80%] z-50 row flex items-center mx-auto  gap-4 bg-[#880D27] px-5 rounded-l-full py-3 right-0 lg:top-[42%] 2xl:top-[46%] -translate-y-1/2">
         <div className="w-[10%] "> <img className="text-[#F1E4B2] " src={rotateLogo} alt="Celebration" /></div>
