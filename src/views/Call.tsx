@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import useTimer from "~/components/useTimer";
 import jLogo from '@assets/jameson-logo.png';
 import loading from '@assets/loading.gif';
-import client from '@assets/client.png';
+import clientImage from '@assets/client.png';
 import sup3rnovaLogo from '@assets/logo.png';
 import signifier from '@assets/signifier.svg';
 import hangup from '@assets/hangup.svg';
@@ -274,7 +274,7 @@ const Call = () => {
                 </div>
 
                 <div className="relative z-40 row flex justify-between items-center md:w-[910px] 2xl:w-[1200px] gap-4 px-5 rounded-full py-3 md:mb-10 2xl:mb-14">
-                    <div id="subscriber" className="bg-no-repeat bg-cover bg-center rounded-full"> <img className="text-[#F1E4B2] md:w-[140px] 2xl:w-[240px]" src={client} alt="Celebration" /></div>
+                    <div id="subscriber" className="bg-no-repeat bg-cover bg-center rounded-full"> <img className="text-[#F1E4B2] md:w-[140px] 2xl:w-[240px]" src={clientImage} alt="Celebration" /></div>
                     <div> <img src={sup3rnovaLogo} alt="Logo" className='md:w-[140px] 2xl:w-[200px]' /></div>
                 </div>
             </div>
