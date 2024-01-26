@@ -1,23 +1,13 @@
 import { useContext, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import sup3rnovaLogo from '@assets/logo.png';
+import { useNavigate } from "react-router-dom";
 import noansr from '@assets/noansr.png';
-import phoneGreen from '@assets/phone-vector.svg';
-import hangup from '@assets/hangup.svg';
 import whiteHangup from '@assets/white-hangup.png';
-import wave from '@assets/wave.gif';
 import rotateLogo from '@assets/rotate-logo.gif';
-import bgPhone from '@assets/initiator-phone.png';
 import bgCanvas from "@assets/curved-bg.png";
 import { useMqttState } from "~/@mqtt-react-hooks";
 import useSocket from "~/components/useSocket";
-
-import Input from "~/lib/Input";
-import Checkbox from "~/lib/Checkbox";
-
 import { AppContext, IVideoInfo } from "~/components/AppContext";
 import { MQTT_TOPICS, ROLES, SOCKET_TOPICS } from "~/lib/constants";
-import Select from "~/lib/Select";
 
 const NoAnswer = () => {
   const navigate = useNavigate();
@@ -28,12 +18,9 @@ const NoAnswer = () => {
 
   const ageArray = Array.from({ length: 63 }, (_, i) => i + 18);
 
-  //get role from url
 
   useEffect(() => {
-    //console.log(videoInfo);
     if (socket && socket.connected && !videoInfo.sessionId) {
-      //console.log("emitting get token");
       emitMessage("GET_TOKEN");
     }
   }, [socket, emitMessage]);
@@ -53,7 +40,6 @@ const NoAnswer = () => {
   }, [socket, addListener]);
 
   const onTokenReceived = (sessionToken: { session_id: string; token: string }) => {
-    //console.log("token recieved", sessionToken);
     const { session_id: sessionId, token } = sessionToken;
 
     const videoInfo: IVideoInfo = {
@@ -65,10 +51,7 @@ const NoAnswer = () => {
       initiator: boothInfo?.mac,
       receiver: "",
     };
-    //update video info context
     updateVideoInfo(videoInfo);
-
-    //publish video info to mqtt
     const payload = {
       ...videoInfo,
     };
@@ -113,7 +96,7 @@ const NoAnswer = () => {
         <img src={bgCanvas} alt="Canvas" className="w-full h-full" />
       </div>
       <div className="relative z-30 flex flex-col justify-between mx-auto md:pt-12 2xl:pt-36 mb-10 2xl:mb-10">
-        <div className="text-center md:mb-0 2xl:mb-16"><img src={sup3rnovaLogo} alt="Logo" className='md:w-[140px] 2xl:w-[200px] mx-auto' /></div>
+        <div className="text-center md:mb-0 2xl:mb-16"><img src={rotateLogo} alt="Logo" className='md:w-[140px] 2xl:w-[200px] mx-auto' /></div>
 
         <h2 className="mt-5 md:text-[24px] xl:lg:text-[36px] mx-auto md:leading-10 xl:leading-[50px] font-bold text-[#F1E4B2] open-sans md:w-[80%] lg:w-[450px] xl:w-[45%]">
         Al parecer no están contestando la otra línea. ¡Por favor, intenta otra vez más tarde!

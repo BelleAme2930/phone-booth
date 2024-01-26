@@ -132,34 +132,29 @@ const ReceiverAcknowledge = () => {
   };
 
   return (
-    <div className="receiver-call h-full lg:pt-[90px] xl:pt-[100px] 2xl:pt-[100px]">
+    <div className="receiver-call h-full md:pt-[50px] xl:pt-[100px] 2xl:pt-[100px]">
 
       <div className="receiver-head relative z-30 flex flex-col justify-between mx-auto">
-        <div className="text-center"><img src={jLogo} alt="Jameson Logo" className="h-auto md:w-[220px] lg:w-[280px] 2xl:w-[360px] mx-auto lg:mb-[60px] xl:mb-[20px] 2xl:mb-[60px]"></img></div>
-        <h2 className="text-2xl mx-auto leading-10 text-[#F1E4B2] text-[22px] lg:text-[24px] xl:text-[30px] 2xl:text-[38px] open-sans tracking-widest">LLAMADA ENTRANDO</h2>
+        <div className="text-center"><img src={jLogo} alt="Jameson Logo" className="h-auto md:w-[220px] lg:w-[280px] 2xl:w-[360px] mx-auto md:mb-[30px] xl:mb-[20px] 2xl:mb-[60px]"></img></div>
+        <h2 className="text-2xl mx-auto leading-10 text-[#F1E4B2] text-[22px] md:text-[26px] xl:text-[30px] 2xl:text-[38px] open-sans tracking-[12px]">LLAMADA ENTRANDO</h2>
       </div>
 
       <div className="flex mx-auto items-center justify-center relative z-40 lg:w-[780px] 2xl:w-[880px] mb-[20px]">
-        <span className="absolute open-sans left-0 lg:w-[200px] text-[#F1E4B2] text-right">OPRIME EL BOTÓN PARA INICIAR LLAMADA A OTRO TELÉFONO DE JAMESON.</span>
-        <button onClick={onNext} className="dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] border-none hover:border-none lg:w-[320px] 2xl:w-[430px]"><span>¡ACEPTAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
+        <span className="absolute open-sans -left-[30px] lg:w-[200px] text-[#F1E4B2] text-right">OPRIME EL BOTÓN PARA INICIAR LLAMADA A OTRO TELÉFONO DE JAMESON.</span>
+        <button onClick={onNext} className="dashboard-btn relative md:text-[50px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] border-none hover:border-none md:w-[380px] 2xl:w-[430px]"><span>¡ACEPTAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
       </div>
 
-      <div className="receiver-mid">
-        <button onClick={handleTermsClick} className="relative z-40 m-5 md:mb-15 mb-15 px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
-          LEER TÉRMINOS Y CONDICIONES*
-        </button>
-      </div>
 
       <div className="receiver-bott ">
         <div className="flex">
-          <div className="flex items-center gap-10 absolute z-50">
-            <div className="relative z-40 relative lg:w-[420px] flex items-center mx-auto">
-              <img src={phoneGreen} alt="Phone" className="-mr-[30px]" />
-              <p className="text-[#F1E4B2] border-[1px] py-2 px-4 rounded-full border-dashed border-green-700">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
+          <div className="flex items-center md:gap-5 xl:gap-10 absolute z-50 md:-ml-[30px] md:mt-[10px]">
+            <div className="relative z-40 relative xl:w-[420px] flex items-center mx-auto">
+              <img src={phoneGreen} alt="Phone" className="-mr-[22px] xl:-mr-[30px] md:h-[60px] xl:h-[90px]" />
+              <p className="text-[#F1E4B2] md:text-[13px] xl:text-[14px] border-[1px] py-1 px-4 rounded-full border-dashed border-green-700">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
             </div>
-            <h2 className="mt-5 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px] w-[420px]">
+            <h2 className="w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px] w-[420px]">
               <input type="checkbox" id="termsCheckbox" onChange={handleCheckboxItselfClick} checked={isTermsChecked} className="h-9 w-9 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
-              <label htmlFor="termsCheckbox" className="ml-2">
+              <label htmlFor="termsCheckbox" className="ml-2 md:w-[280px]">
                 Confirmo que soy mayor de 18 años de edad, y acepto los términos y condiciones.
               </label>
             </h2>
@@ -167,7 +162,14 @@ const ReceiverAcknowledge = () => {
         </div>
 
       </div>
-      <div className="absolute w-[80%] z-50 row flex items-center mx-auto  gap-4 bg-[#880D27] px-5 rounded-l-full py-3 right-0 lg:top-[42%] 2xl:top-[46%] -translate-y-1/2">
+
+      <div className="receiver-mid">
+        <button onClick={handleTermsClick} className="relative md:top-[80px] z-40 mx-5 mt-2 md:mb-15 mb-15 px-2 xl:px-4 py-3 w-3/4 mx-auto bg-red-900 bg-opacity-70 text-[#F1E4B2] rounded-[36px] md:w-[280px] xl:w-[340px] md:text-[14px] 2xl:text-[17px] border-none hover:border-none hover:text-white">
+          LEER TÉRMINOS Y CONDICIONES*
+        </button>
+      </div>
+
+      <div className="absolute w-[80%] z-50 row flex items-center mx-auto  gap-4 bg-[#880D27] px-5 rounded-l-full py-5 right-0 md:top-[44%] 2xl:top-[46%] -translate-y-1/2">
         <div className="w-[10%] "> <img className="text-[#F1E4B2] " src={rotateLogo} alt="Celebration" /></div>
         <div className="w-[50%]">
           <div className="flex items-center">
@@ -176,21 +178,21 @@ const ReceiverAcknowledge = () => {
           <div>
           </div>
         </div>
-        <div className="w-[20%] absolute right-0">
-          <div className="call-info md:px-4 2xl:px-5 mt-[6px]">
-            <p className="uppercase md:text-[14px] 2xl:text-[17px]"><strong>Amplía tu círculo,</strong> <span className="open-sans">conecta con nuevas amistades y </span></p>
-            <p className="uppercase md:text-[14px] 2xl:text-[17px]"><strong>gana premios.*</strong></p>
+        <div className="w-[24%] absolute right-0">
+          <div className="call-info md:px-4 2xl:px-5">
+            <p className="uppercase md:text-[14px] 2xl:text-[17px] text-[#F1E4B2]"><strong>Amplía tu círculo,<br/></strong> <span className="open-sans">conecta con nuevas <br/>amistades y <br/></span></p>
+            <p className="uppercase md:text-[14px] 2xl:text-[17px] text-[#F1E4B2]"><strong>gana premios.*</strong></p>
           </div>
         </div>
       </div>
-      <div className="phone-wire-holding absolute right-0 z-50 top-[20%]">
-        <img src={handHoldingPhone} alt="Canvas" />
+      <div className="phone-wire-holding absolute right-0 z-50 bottom-0">
+        <img className="md:h-[420px]" src={handHoldingPhone} alt="Canvas" />
       </div>
       <div className="absolute right-0 top-0 h-full w-[40%] z-10">
         <img src={bgCanvas} alt="Canvas" className="w-full h-full" />
       </div>
-      <div className="absolute right-10 bottom-5 z-50 lg:w-[400px] 2xl:w-[460px]">
-        <p className="text-[#F1E4B2] lg:text-[13px] xl:text-[15px]">Consuma Responsablemente. Jameson Irish Whiskey 40% Alc. Vol. Distribuye B. Fernánadez & Hnos.</p>
+      <div className="absolute md:right-5 xl:right-10 bottom-5 z-50 md:w-[340px] 2xl:w-[460px]">
+        <p className="text-[#F1E4B2] text-left lg:text-[13px] xl:text-[15px]">Consuma Responsablemente. Jameson Irish Whiskey 40% Alc. Vol. Distribuye B. Fernánadez & Hnos.</p>
       </div>
 
       <Modal
@@ -198,8 +200,8 @@ const ReceiverAcknowledge = () => {
         onRequestClose={() => setShowTerms(false)}
         contentLabel="Terms Modal"
         ariaHideApp={false}
-        className="modal" // Add your custom modal styles here
-        overlayClassName="overlay" // Add your custom overlay styles here
+        className="modal"
+        overlayClassName="overlay"
       >
         <button onClick={() => setShowTerms(false)} className="absolute right-5 top-5 text-[#007749] text-[16px] border-none hover:border-none hover:text-[#007749]">
           <i className="fa fa-solid fa-xmark"></i>

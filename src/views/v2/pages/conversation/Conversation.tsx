@@ -16,7 +16,7 @@ import { useNavigate } from 'react-router-dom';
 function Conversation() {
 
     const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(55);
+    const [seconds, setSeconds] = useState(0);
     const [message, setMessage] = useState("En pocos segundos ampliarás tu círculo de amistades. Aprovecha este tiempo al máximo y recibirás una recompensa.");
     const [subMessage, setSubMessage] = useState("Te tiramos la toalla con algunas peguntas para romper el hielo.");
 
@@ -81,11 +81,11 @@ function Conversation() {
                     ) : ""}
             <div className="absolute right-0 top-0 h-full w-[40%] z-10">
                 <img src={bgCanvas} alt="Canvas" className="w-full h-full" />
-                <div className='flex flex-col w-[250px] absolute top-[18%] md:right-[16%] 2xl:right-[24%]'>
+                <div className='flex flex-col md:w-[220px] xl:w-[250px] absolute lg:top-[12%] xl:top-[18%] md:right-[6%] xl:right-[24%]'>
                     <div className='timer border border-[10px] border-[#007749] text-[48px] text-[#F1E4B2] rounded-[27px] md:mb-8 2xl:mb-20'>
                         {`${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`}
                     </div>
-                    <div className='relative min-w-[250px] bg-[#154734] py-[30px] px-[20px] border-dashed min-h-[260px] border-[1px] border-[#F1E4B2] rounded-[18px] relative flex items-center'>
+                    <div className='relative min-w-[220px] xl:min-w-[250px] bg-[#154734] py-[30px] px-[20px] border-dashed md:min-h-[220px] xl:min-h-[260px] border-[1px] border-[#F1E4B2] rounded-[18px] relative flex items-center'>
                         {seconds > 4 ?
                             (<p className='absolute open-sans pb-[5px] border-b border-[#FFF0BF] text-[#FFF0BF] top-[25px] left-[50%] transform translate-x-[-50%] translate-y-[-50%] whitespace-nowrap'>AMPLÍA TU CÍRCULO</p>)
                             : ""
@@ -117,13 +117,13 @@ function Conversation() {
                             <img src={signifier} className='absolute bottom-[15px] right-[15px]' />
                         </p>
                     </div>
-                    <p className='text-[#F1E4B2] mt-[14px] font-normal open-sans'>{subMessage}</p>
+                    <p className='text-[13px] xl:text-[14px] text-[#F1E4B2] mt-[14px] font-normal open-sans'>{subMessage}</p>
                 </div>
             </div>
             <div className="absolute z-40 right-7 bottom-7 h-10 w-10">
                 <button className='border-none hover:border-none focus:border-none focus:outline-none' onClick={hangUpCall}><img src={hangup} alt="Hand up" className="w-full h-full" /></button>
             </div>
-            <div className="mx-10 relative z-30 flex flex-col justify-between mx-auto md:pt-10 2xl:pt-14 mb-10 2xl:mb-10">
+            <div className="mx-10 relative z-30 flex flex-col justify-between mx-auto md:pt-4 lg:pt-5 2xl:pt-14 mb-6 2xl:mb-10">
                 <div className="text-center md:mb-6 2xl:mb-16"><img src={jLogo} alt="Jameson Logo" className="h-auto md:w-[180px] lg:w-[220px] 2xl:w-[300px]"></img></div>
             </div>
 
@@ -133,7 +133,7 @@ function Conversation() {
                 <div> <p className='text-[#F1E4B2] md:text-[16px] 2xl:text-[18px]'>Iniciando Videollamada</p></div>
             </div>
 
-            <div className="relative z-40 row flex justify-between items-center md:w-[910px] 2xl:w-[1200px] gap-4 px-5 rounded-full py-3 md:mb-10 2xl:mb-14">
+            <div className="relative z-40 row flex justify-between items-center md:w-[760px] md:mt-[80px] 2xl:w-[1200px] gap-4 px-5 rounded-full py-3 md:mb-10 2xl:mb-14">
                 <div className="bg-no-repeat bg-cover bg-center rounded-full"> <img className="text-[#F1E4B2] md:w-[140px] 2xl:w-[240px]" src={client} alt="Celebration" /></div>
                 <div> <img src={sup3rnovaLogo} alt="Logo" className='md:w-[140px] 2xl:w-[200px]' /></div>
             </div>

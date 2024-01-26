@@ -184,7 +184,7 @@ function Home() {
             <div className="settings__head "></div>
           </div>
         </div>
-        <div className="rounded-full flex items-center justify-center mx-auto md:mt-[40px] 2xl:mt-[90px] md:mb-5 2xl:mb-8">
+        <div className="rounded-full flex items-center justify-center mx-auto md:mt-[40px] lg:mt-0 2xl:mt-[60px] md:mb-5 2xl:mb-8">
           <img src={rotateLogo} className="logo-v2 md:h-40 md:w-40 2xl:h-[220px] 2xl:w-[220px] react magnific-popup" alt="logo" />
         </div>
         <div className="text-center w-2/3 mx-auto mb-5"><p className="font-light text-[#F1E4B2] open-sans md:text-[14px] 2xl:text-[17px]">OPRIME EL BOTÓN PARA INICIAR LLAMADA A OTRO TELÉFONO DE JAMESON.</p></div>
@@ -192,7 +192,7 @@ function Home() {
         <button onClick={IntializeCall} className="magnific-popup-bit-delay dashboard-btn relative md:text-[46px] 2xl:text-[64px] font-extrabold text-[#F1E4B2] bg-[#007749] rounded-[30px] md:w-[350px] 2xl:w-[420px] mx-auto md:mb-4 2xl:mb-8 border-none hover:border-none" disabled={isCallDisabled}><span>¡LLAMAR!</span><img src={cursor} className="absolute md:right-0 md:-bottom-6 2xl:right-2 2xl:-bottom-4"></img></button>
 
 
-        <h2 className="mt-5 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px]">
+        <h2 className="md:mt-2 lg:mt-3 w-2/3 mx-auto text-left text-[#F1E4B2] flex items-center gap-3 mb-1 open-sans md:text-[14px] 2xl:text-[17px]">
           <input type="checkbox" id="termsCheckbox" onChange={handleCheckboxItselfClick} checked={isTermsChecked} className="h-9 w-9 bg-transparent border-[5px] border-[#F1E4B2] checked:!bg-transparent checked:!border-[5px] checked:!border-[#F1E4B2] !outline-none focus:!outline-none cursor-pointer" />
           <label htmlFor="termsCheckbox" className="ml-2">
             Confirmo que soy mayor de 18 años de edad, y acepto los términos y condiciones.
@@ -216,7 +216,7 @@ function Home() {
         <div className="phone-holding absolute right-0 bottom-0 z-10 flex justify-end">
           <img src={handHoldingPhone} alt="Canvas" className="" />
         </div>
-        <div className="absolute md:w-[220px] 2xl:w-[250px] right-0 top-0 h-full flex flex-col justify-center">
+        <div className="absolute md:w-[190px] 2xl:w-[250px] right-0 top-0 h-full flex flex-col justify-center">
           <div className="call-info bg-[#880d27] md:px-4 md:py-8 2xl:px-5 2xl:py-8">
             <p className="uppercase md:text-[14px] 2xl:text-[17px]"><strong>Amplía tu círculo,</strong> <span className="open-sans">conecta con nuevas amistades y </span></p>
             <p className="uppercase md:text-[14px] 2xl:text-[17px]"><strong>gana premios.*</strong></p>

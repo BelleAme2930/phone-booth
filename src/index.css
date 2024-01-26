@@ -35,21 +35,26 @@ body {
   background-color: #154734;
   color: rgba(255, 255, 255, 0.87);
 }
-body:has(.receiver-call){
+
+body:has(.receiver-call) {
   overflow: hidden;
 }
-@media(min-width: 1080px){
-  body:has(.phone-holding){
+
+@media(min-width: 1080px) {
+  body:has(.phone-holding) {
     overflow: hidden;
   }
 }
+
 .app-wrap:has(.terms),
-.app-wrap:has(.terms) > div{
-    height: initial;    
+.app-wrap:has(.terms)>div {
+  height: initial;
 }
-.letter-spacing-10{
+
+.letter-spacing-10 {
   letter-spacing: 10px;
 }
+
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
@@ -61,24 +66,29 @@ body:has(.receiver-call){
 
 #root:has(.connecting-call),
 #root:has(.conversation-call),
-#root:has(.receiver-call){
+#root:has(.receiver-call) {
   padding: 0;
   width: 90%;
 }
-#root:has(.receiver-call) .container{
+
+#root:has(.receiver-call) .container {
   margin: 0 auto;
 }
+
 @media(min-width: 1536px) {
+
   #root:has(.connecting-call),
-  #root:has(.conversation-call){
+  #root:has(.conversation-call) {
     width: 95%;
     max-width: 100%;
   }
-  #root:has(.form){
+
+  #root:has(.form) {
     width: 90%;
     max-width: 100%;
   }
-  #root:has(.form) > .container{
+
+  #root:has(.form)>.container {
     margin: 0 auto;
   }
 }
@@ -187,6 +197,7 @@ button:focus-visible {
   .bottle img {
     height: 500px;
   }
+
   .phone-holding img {
     height: 550px;
     width: 500px;
@@ -199,8 +210,8 @@ button:focus-visible {
   }
 
   .phone-holding img {
-    height: 750px;
-    width: 600px;
+    height: 800px;
+    width: auto;
   }
 }
 
@@ -229,6 +240,7 @@ body:has(.conversation-call) {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 /* Webkit-based browsers */
 ::-webkit-scrollbar {
   width: 12px;
@@ -243,7 +255,8 @@ body:has(.conversation-call) {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1D3C34; /* Updated color */
+  background: #1D3C34;
+  /* Updated color */
   border-radius: 6px;
 }
 
@@ -253,11 +266,13 @@ body:has(.conversation-call) {
 
 /* Firefox */
 * {
-  scrollbar-color: #1D3C34 #f1f1f1; /* Updated color */
+  scrollbar-color: #1D3C34 #f1f1f1;
+  /* Updated color */
 }
 
 *::-moz-scrollbar-thumb {
-  background: #1D3C34; /* Updated color */
+  background: #1D3C34;
+  /* Updated color */
 }
 
 *::-moz-scrollbar-track {
@@ -268,27 +283,30 @@ body:has(.conversation-call) {
   background: #555;
 }
 
-@media(min-width: 1200px){
-  .phone-wire-holding img{
-  
-  height: 500px;   
+@media(min-width: 1200px) {
+  .phone-wire-holding img {
+
+    height: 500px;
+  }
 }
+
+@media(min-width: 1440px) {
+  .phone-wire-holding img {
+    width: auto;
+    height: 650px;
+  }
 }
-@media(min-width: 1440px){
-.phone-wire-holding img{
-  width: auto;
-  height: 650px;
+
+@media(min-width: 1680px) {
+  .phone-wire-holding img {
+    height: 700px;
+  }
 }
-}
-@media(min-width: 1680px){
-.phone-wire-holding img{
-  height: 700px;
-}
-}
-@media(min-width: 1800px){
-.phone-wire-holding img{
-  height: 740px;
-}
+
+@media(min-width: 1800px) {
+  .phone-wire-holding img {
+    height: 740px;
+  }
 }
 
 /* Modal Styles */
@@ -322,15 +340,17 @@ body:has(.conversation-call) {
   align-items: center;
 }
 
-#termsCheckbox:focus{
+#termsCheckbox:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 @keyframes handHoldingPhoneAnimation {
   0% {
     transform: translateY(10%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -342,6 +362,7 @@ body:has(.conversation-call) {
     transform: translateX(-10%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -353,115 +374,153 @@ body:has(.conversation-call) {
   bottom: 0;
   animation: handHoldingPhoneAnimation 4s ease-in-out;
 }
-.magnific-popup{
+
+.magnific-popup {
   animation: magnificPopupAnimation 0.2s ease-in-out;
 }
-.magnific-popup-bit-delay{
+
+.magnific-popup-bit-delay {
   animation: magnificPopupAnimation 0.2s ease-in-out;
 }
+
 .bottle {
   position: absolute;
   left: 0;
-  animation: jGingerAnimation 4s ease-in-out; 
+  animation: jGingerAnimation 4s ease-in-out;
 }
+
 @keyframes magnificPopupAnimation {
   0% {
     transform: scale(0);
     opacity: 0;
   }
+
   25% {
     transform: scale(0.5);
     opacity: 0.25;
   }
+
   50% {
     transform: scale(1);
     opacity: 0.50;
   }
+
   75% {
     transform: scale(1.3);
     opacity: 0.75;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
 
-@media(max-width: 1080px){
-  .f-sticky-para{
+@media(max-width: 1080px) {
+  .f-sticky-para {
     max-width: 500px;
     margin: 0 auto;
   }
 }
-.receiver-head{
-    margin-bottom: 200px;
-}
-.receiver-mid{
-    margin-top: 50px;
-}
-.receiver-bott{
-    margin-top: 50px;
+
+.receiver-head {
+  margin-bottom: 160px;
 }
 @media(min-width: 1200px){
-    .receiver-head{
+  .receiver-head {
     margin-bottom: 220px;
-}
-    .receiver-bott{
-    margin-top: 30px;
+  }
 }
 
+@media(min-width: 1200px){
+  .receiver-mid {
+    margin-top: 50px;
+  }
+  
+  .receiver-bott {
+    margin-top: 50px;
+  }
 }
-@media(min-width: 1440px){
-    .receiver-head{
+
+@media(min-width: 1200px) {
+  .receiver-head {
+    margin-bottom: 220px;
+  }
+
+  .receiver-bott {
+    margin-top: 30px;
+  }
+
+}
+
+@media(min-width: 1440px) {
+  .receiver-head {
     margin-bottom: 250px;
+  }
 }
-}
-@media(min-width: 1536px){
-.receiver-head{
+
+@media(min-width: 1536px) {
+  .receiver-head {
     margin-bottom: 260px;
-}
-.receiver-bott{
+  }
+
+  .receiver-bott {
     margin-top: 20px;
+  }
 }
-}
-@media(min-width: 1600px){
-.receiver-head{
+
+@media(min-width: 1600px) {
+  .receiver-head {
     margin-bottom: 270px;
-}
-}
-@media(min-width: 1750px){
-  .receiver-head{
-      margin-bottom: 280px;
   }
+}
+
+@media(min-width: 1750px) {
+  .receiver-head {
+    margin-bottom: 280px;
   }
-@media(min-width: 1920px){
-.receiver-head{
+}
+
+@media(min-width: 1920px) {
+  .receiver-head {
     margin-bottom: 310px;
+  }
 }
-}
-@media(min-width: 2000px){
-.receiver-head{
+
+@media(min-width: 2000px) {
+  .receiver-head {
     margin-bottom: 350px;
+  }
 }
-}
-@media(min-width: 2200px){
-.receiver-head{
+
+@media(min-width: 2200px) {
+  .receiver-head {
     margin-bottom: 400px;
+  }
 }
+
+@media(min-width: 2350px) {
+  .receiver-head {
+    margin-bottom: 430px;
+  }
 }
-@media(min-width: 2350px){
-  .receiver-head{
-      margin-bottom: 430px;
+
+@media(min-width: 2500px) {
+  .receiver-head {
+    margin-bottom: 480px;
   }
+}
+
+h2.message {
+  font-size: 24px;
+}
+
+@media(min-width: 1200px){
+  h2.message {
+    font-size: 30px;
   }
-  @media(min-width: 2500px){
-    .receiver-head{
-        margin-bottom: 480px;
-    }
-    }
-    h2.message{
-      font-size: 30px;
-  }
-.no-answer-button{
+}
+
+.no-answer-button {
   box-shadow: 0px 4px 4px 0px #00000040;
 }

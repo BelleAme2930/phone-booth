@@ -111,7 +111,7 @@ function Form() {
                         </div>
                         <div className="flex flex-wrap gap-2 mt-3">
                             <div className="flex justify-center gap-2 text-black w-full">
-                                <button className="key font-semibold rounded-[5px] text-[16px] h-[40px] open-sans flex items-center justify-center special-key bg-[#ADB3BC] w-[80px]">123</button>
+                                <button className="key numbers-key font-semibold rounded-[5px] text-[16px] h-[40px] open-sans flex items-center justify-center special-key bg-[#ADB3BC] w-[80px]">123</button>
                                 <button className="key font-semibold bg-white rounded-[5px] text-[16px] h-[40px] open-sans flex items-center justify-center w-[180px]">space</button>
                                 <button className="key font-semibold rounded-[5px] text-[16px] h-[40px] open-sans flex items-center justify-center special-key bg-[#ADB3BC] w-[80px]">return</button>
                             </div>

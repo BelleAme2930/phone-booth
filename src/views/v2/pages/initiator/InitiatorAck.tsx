@@ -121,9 +121,9 @@ console.log("navigate....")
       <button className="border-none hover:border-none focus:border-none focus:outline-none" onClick={hangUpCall}><img src={hangup} alt="Hand up" className="w-full h-full" /></button>
       </div>
       <div className="relative z-30 flex flex-col justify-between mx-auto md:pt-14 2xl:pt-36 mb-10 2xl:mb-10">
-        <div className="text-center md:mb-6 2xl:mb-16"><img src={jLogo} alt="Jameson Logo" className="h-auto md:w-[220px] lg:w-[280px] 2xl:w-[360px] mx-auto"></img></div>
+        <div className="text-center md:mb-10 2xl:mb-16"><img src={jLogo} alt="Jameson Logo" className="h-auto md:w-[220px] lg:w-[280px] 2xl:w-[360px] mx-auto"></img></div>
 
-        <h2 className="mt-5 text-2xl mx-auto leading-10 text-[#F1E4B2] open-sans md:w-[80%] lg:w-[70%] xl:w-[50%]">
+        <h2 className="mt-5 md:text-[22px] xl:text-2xl mx-auto leading-10 text-[#F1E4B2] open-sans md:w-[80%] md:w-[500px] xl:w-[50%]">
           ESTAMOS AMPLIANDO TU CÍRCULO, ESPERA UNOS SEGUNDOS MIENTRAS TE CONECTAMOS.
         </h2>
       </div>
@@ -142,14 +142,9 @@ console.log("navigate....")
         </div>
         <div className="w-[20%]"> <img src={rotateLogo} alt="Logo" /></div>
       </div>
-
-      {/* <div className="relative z-40 relative w-[400px] flex items-center mx-auto">
-        <img src={phoneGreen} alt="Phone" className="" />
-        <p className="text-[#F1E4B2]">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
-      </div> */}
-      <div className="relative z-40 relative lg:w-[420px] flex items-center mx-auto">
+      <div className="relative z-40 relative lg:w-[420px] flex items-center mx-auto justify-center">
               <img src={phoneGreen} alt="Phone" className="-mr-[30px]" />
-              <p className="text-[#F1E4B2] border-[1px] py-2 px-4 rounded-full border-dashed border-green-700">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
+              <p className="text-[#F1E4B2] text-[14px] border-[1px] py-2 px-4 rounded-full border-dashed border-green-700">LEVANTA EL TELÉFONO PARA ESCUCHAR</p>
             </div>
     </div>
   );
